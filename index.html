@@ -3,46 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Web Index Page</title>
-        <style>
-            body {
-                margin: 0;
-            }
-            a {
-                color: black;
-                text-decoration: none;
-            }
-            h1 {
-                text-align: center;
-                font-size: 50px;
-                text-decoration: none;
-                border-bottom: 3px solid black;
-                margin-bottom: 0px;
-                padding-bottom: 5px;
-            }
-            h2 {
-                margin-top: 0;
-                margin-bottom: 10px;
-            }
-            .c {
-                display: table;
-                margin-left: auto;
-                margin-right: 50px;
-                margin-top: 10px;
-            }
-            #g ol { 
-                /* 웹페이지에 있는 모든 ol중에 부모가 g인 ol 만 적용 */
-                border-right: solid black 3px;
-                width: 100px;
-                margin: 0;
-                padding: 20px;
-                padding-left: 30px;  
-            }            
-            #g
-            {
-            display:grid;
-            grid-template-columns: 150px 1fr;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
+        <!--웹브라우저야 style.css를 다운로드 받아서 여기에 그 코드가 있는것처럼 동작해!!-->
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
@@ -52,7 +14,7 @@
                 <li><a href="2.html">CSS</a></li>
                 <li><a href="3.html">JavaScript</a></li>
             </ol>
-            <div style="padding: 20px;">
+            <div>
                 <h2>Hi Wellcome to introducing page</h2>
                 <img src="coding.jpg" width="100%">
                 <p>Web is a computer programming system created by Donald E. Knuth as the first implementation of what he called "literate programming": 
