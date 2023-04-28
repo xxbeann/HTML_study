@@ -13,6 +13,19 @@ h1 {
     margin-bottom: 0px;
     padding-bottom: 5px;
 }
+.html
+{
+    color: orangered;
+}
+.css
+{
+    color: blue;
+}
+.js
+{
+    color: rgb(243, 243, 11);
+    -webkit-text-stroke: 0.3px navy;
+}
 #g
 {
 display:grid;
@@ -24,7 +37,7 @@ grid-template-columns: 150px 1fr;
     width: 100px;
     margin: 0;
     padding: 20px;
-    padding-left: 30px;  
+    padding-left: 30px;
 }
 #g h2 {
     margin-top: 0;
