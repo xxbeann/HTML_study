@@ -7,6 +7,28 @@
         <!--웹브라우저야 style.css를 다운로드 받아서 여기에 그 코드가 있는것처럼 동작해!!-->
     </head>
     <body>
+        <input type="button" value="night" onclick="
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            var lis = document.querySelectorAll('a');
+            for(var name in lis)
+            {
+                lis[name].style.color = 'white';
+            }
+            //왜 body태그로 적용하면 a태그에 관해서는 컬러가 안바뀔까?(원래있던 css따라감)
+            //링크랑 텍스트는 별개. querySelector로 접근할 때 원하는 요소 자유자재로 조절할 수 있도록 정확히 저격하는게 중요.
+            //document.querySelector('a').style.color='white';
+            //querySelector는 첫번째 요소를 반환한다. 위와같이 a태그에 관해 적용시 첫번째 a태그에만 적용된다.
+        ">
+        <input type="button" value="day" onclick="
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            var lis = document.querySelectorAll('a');
+            for(var name in lis)
+            {
+                lis[name].style.color = 'black';
+            }            
+        ">
         <h1><a href="index.html">WEB</a></h1>
         <div id="g">
             <ol>  
