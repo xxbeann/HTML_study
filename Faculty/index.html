@@ -49,9 +49,9 @@
 <p>종료 태그 &lt;/hr&gt;를 사용하지 않습니다.</p>
 </body>
 </html>
--->
 
-<!--문자, 기호, 심볼 입력-->
+
+문자, 기호, 심볼 입력
 
 <!DOCTYPE html>
 <html>
@@ -67,5 +67,144 @@
 &radic;2 = 1.414 <br>
 2 &nbsp;&nbsp; &lt; &nbsp;&nbsp;&nbsp; 3 <br>
 오늘 &quot;Elvis&#34; 노래를 들었다.
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 삽입</title>
+</head>
+<body>
+    <h3>이미지 삽입</h3>
+    <hr>
+    <p>오늘도 양파쿵야 배고파</p>
+    <img = src="media/그치만-굴복해버림-학교.jpg" width="150" height="200" alt="쿵야">
+    <img = src="kitae.jpg" width="80" height="100" alt="사진없음">
+    <img = src="http://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/service/453a624d017900001.png" alt="사진 주소 변경됨" width="100" height="100">
+    
+    <h3>라면을 끓이는 순서</h3>
+    <hr>
+    <ol type="A">
+        <li>물을 끓인다.</li>
+        <li>라면과 스프를 넣는다.</li>
+        <li>파를 썰어 넣는다.</li>
+        <li>5분 후 먹는다.</li>
+    </ol>
+
+    
+    <h3>웹 브라우저 종류</h3>
+    <hr>
+    <dl>
+        <dt><strong>Internet Explorer</strong></dt>
+        <dd>마이크로소프트에서 만든 브라우저로 현재 국내 시장에서 가장 많이 사용</dd>
+        <dt><strong>Firefox</strong></dt>
+        <dd>Mozial 재단에서 오픈 소스로 만든것으로 W3C의 웹 표준을 선도</dd>
+        <dt><strong>Chrome</strong></dt>
+        <dd>Made by Google</dd>
+    </dl>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 테이블 만들기</title>
+</head>
+<body>
+    <h3>기본 구조를 가진 표</h3>
+    <hr>
+    <table border="1">
+        <caption>1학기 성적</caption>
+        <thread>
+            <tr><th>이름</th><th>HTML</th><th>CSS</th></tr>
+        </thread>
+        <tfoot>
+            <tr><th>합</th><th>225</th><th>230</th></tr>
+        </tfoot>
+        <tbody>
+            <tr><td>황기태</td><td>80</td><td>70</td></tr>
+            <tr><td>이재문</td><td>80</td><td></td></tr>
+            <tr><td>이병은</td><td>80</td><td>70</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크 만들기</title>
+</head>
+<body>
+    <h3>링크 만들기</h3>
+    <hr>
+    포털 사이트
+    <ul>
+        <li><a href="http://wwww.naver.com">네이버</a></li>
+        <li><a href="http://wwww.daum.net">다음</a></li>
+    </ul>
+    신문 사이트
+    <ul>
+        <li><a href="http://www.etnews.com"><img src="media/그치만-굴복해버림-학교.jpg" width="150" height="200" alt="전자신문"></a></li>
+    </ul>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크 만들기</title>
+</head>
+<body>
+    <h3>Elvis Presley</h3>
+    <hr>
+    <ul>
+        <li><a href="#love">Love me tender</a></li>
+    </ul>
+    <h3 id="love">Love me tender</h3>
+    이거 맞냠??
+</body>
+</html>
+
+2개의 인라인 프레임을 가진 웹 페이지
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe을 가지는 웹 페이지</title>
+</head>
+<body>
+    <h3>2개의 &lt;iframe&gt;을 가집니다.</h3>
+    <hr>
+    <iframe src="iframe/iframe1.html" width="200" height="150"></iframe>
+    <iframe src="iframe/iframe2.html" width="200" height="100"></iframe>
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe을 이용한 신문 사이트</title>
+</head>
+<body>
+    <h3>2개의 신문 사이트입니다.</h3>
+    <hr>
+    <iframe src="http://www.etnews.com" width="300" height="300"></iframe>
+    <iframe src="http://www.mk.co.kr" width="300" height="300"></iframe>
 </body>
 </html>
