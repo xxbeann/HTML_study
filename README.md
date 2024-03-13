@@ -1,4 +1,3 @@
-# 📙 Web study html&internet
-
-For more information<br>
-https://xxbean.notion.site/WEB1-HTML-Internet-f24faaaf65754b9e9d2c28251d7acd14?pvs=4
+### 📙 Web Frontend Study
+---
+생활코딩과 학부수업을 기록하는 공부기록장입니다 :)
