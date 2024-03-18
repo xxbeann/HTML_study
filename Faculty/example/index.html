@@ -326,7 +326,6 @@ checked속성이 사용되면 체크된 상태로 출력 but web에서 사용자
 
 
 같은 name을 가진 라디오버튼 중 하나만 선택가능
--->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -346,5 +345,32 @@ checked속성이 사용되면 체크된 상태로 출력 but web에서 사용자
         <input type="radio" name="china" value ="3">
         짜장면<img src ="media/그치만-굴복해버림-학교.jpg">
     </form>
+</body>
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 태그와 인라인 태그</title>
+</head>
+<body>
+    <div style="background-color: red;">div1</div>
+    <div style="background-color: blue;">div2</div>
+    <span style="background-color: green;">span1</span>
+    <span style="background-color: yellow;">span2</span>
+    <div style="background-color: plum;">div3</div>
+    <div style="background-color: skyblue;">
+        <span style="background-color: mediumspringgreen;">div 블록 안 span 블록</span>
+    </div>
+    <span style="background-color: maroon;">
+        <div style="background-color: mediumblue;">span 블록 안 div 블록</div>
+    </span>
+    <span style="background-color: orange;">span 블록
+        <div style="background-color: greenyellow;">span 블록 안 div 블록</div>
+    </span>
 </body>
 </html>
