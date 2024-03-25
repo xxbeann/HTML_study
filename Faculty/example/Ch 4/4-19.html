@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>텍스트 그림자</title>
     <style>
+        /*text-shadow: 오른쪽(수평거리) 아래(수직거리) blur_길이 color  */
         div{
             font: normal 24px verdana;
         }
@@ -14,7 +15,10 @@
         .redText{
             text-shadow: 3px 3px red;
         }
-        .glowEffect{
+        .blurText{
+            text-shadow: 3px 3px 5px skyblue;
+        }
+        .glowEffect{ /*blur*/
             text-shadow: 0px 0px 3px red;
         }
         .wordArtEffect{
@@ -32,6 +36,12 @@
     </style>
 </head>
 <body>
-    
+    <div class="dropText">Drop Shadow</div>
+    <div class="redText">Color Shadow</div>
+    <div class="blurText">Blur Shadow</div>
+    <div class="glowEffect">Glow Effect</div>
+    <div class="wordArtEffect">WordArt Effect</div>
+    <div class="threeDEffect">3D Effect</div>
+    <div class="multiEffect">Multiple Shadow Effect</div>
 </body>
 </html>
