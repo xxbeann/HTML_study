@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>195397_유정빈</title>
+    <style>
+        h3{
+            color: red;
+        }
+        h3:hover{
+            color: blue;
+        }
+        
+        #hovering{
+            position: absolute;
+        }
+        #hovering img{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+
+        /* 
+        javascript 이용해서 이미지 전환
+        #hover_js{
+            position: relative;
+        }
+        #hover_js img{
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        */
+    </style>
+</head>
+<body>
+    <h3>hover 실습</h3>
+    
+    <div id="hovering">
+        <img src="media/FT-내가-너무나-소중한-췌에.jpg" alt="내로남불" >
+        <img src="media/그치만-굴복해버림-학교.jpg" alt="학교">
+    </div>
+    
+    <!-- 
+    javascript이용 html에서 이미지 전환
+    <div id="hover_js">
+        <img src="media/FT-내가-너무나-소중한-췌에.jpg" alt="내로남불"
+        onmouseover="this.src='media/그치만-굴복해버림-학교.jpg'"
+        onmouseout="this.src='media/FT-내가-너무나-소중한-췌에.jpg'"
+        >
+    </div>
+    -->
+
+</body>
+</html>
