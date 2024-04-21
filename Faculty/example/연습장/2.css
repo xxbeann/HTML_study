@@ -50,10 +50,6 @@ article{
     padding-right: 60px;
     font-size: 25px;
 }
-#menubar ul span{
-    position: absolute;
-    color: black;
-}
 #menubar ul li a{
     text-decoration: none;
     padding-left: 20px;
