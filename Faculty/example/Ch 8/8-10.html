@@ -9,6 +9,7 @@
         function showHTML() {
             if(win==null || win.closed)
                 win = window.open("", "outWin", "width=300, height=200");
+                //새롭게 윈도우 창을 연다.
             let textArea = document.getElementById("srcText");
             win.document.open();
             win.document.write(textArea.value);
@@ -26,3 +27,16 @@
     <button onclick="showHTML()">HTML 문서 출려하기</button>
 </body>
 </html>
+
+<!--
+<html>
+<head>
+<title>테스트 문서</title>
+</head>
+<body>
+<h2>안녕하세요</h2>
+<hr>
+문서 만들기 축하
+</body>
+</html>
+-->
