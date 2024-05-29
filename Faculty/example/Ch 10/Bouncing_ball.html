@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ball {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+    <script>
+        let ball;
+        let ballsize;
+        let x;
+        let y;
+        let velocityX;
+        let velocityY;
+        let gravity;
+        let restitution;
+        let isMouseDown;
+        let offsetX;
+        let offsetY;
+
+        function init() {
+            ball = document.getElementById('ball');
+            ballsize = 40;
+            x = 200;
+            y = 100;
+            velocityX = Math.random()
+            velocityY = Math.random()
+            gravity = 0.5;
+            restitution = 0.8;
+            isMouseDown = false;
+            offsetX = 0;
+            offsetY = 0;
+        }
+
+        ball.addEventListner('mousedown', function(event){
+            isMouseDown = true;
+            offsetX = event.clientX - x;
+            offsetY = event.clientY - y;
+        })
+
+        document.addEventListner('mousemove', function(event){
+            if(isMouseDown){
+                x = event.clientX - offsetX;
+                y = event.clientY - offsetY;
+            }
+        })
+
+        document.addEventListener('mouseup', function(){
+            isMouseDown = false;
+        })
+
+        setInterval(update, 1000/60);
+
+        function update() {
+            if (!isMouseDown) {
+                velocityY += gravity;
+                x += velocityX;
+                y += velocityY;
+
+                if (y + ballsize > window.innerHeight){
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="ball"></div>
+</body>
+</html>
