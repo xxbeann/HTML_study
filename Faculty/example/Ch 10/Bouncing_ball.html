@@ -1,78 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #ball {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: red;
+  <title>Bouncing Ball Simulation</title>
+  <style>
+    #ball {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: red;
+    }
+  </style>
+  <script>
+    let ball;
+    let ballSize;
+    let x;
+    let y;
+    let velocityX;
+    let velocityY;
+    let gravity;
+    let restitution;
+    let isMouseDown;
+    let offsetX;
+    let offsetY;
+
+    function init() {
+      ball = document.getElementById('ball');
+      ballSize = 40;
+      x = 200;
+      y = 100;
+      velocityX = Math.random() * 10 - 5; // 랜덤 초기 속도 (-5 ~ 5)
+      velocityY = Math.random() * 10 - 5; // 랜덤 초기 속도 (-5 ~ 5)
+      gravity = 0.5;
+      restitution = 0.8;
+      isMouseDown = false;
+      offsetX = 0;
+      offsetY = 0;
+
+      ball.addEventListener('mousedown', function(event) {
+        isMouseDown = true;
+        offsetX = event.clientX - x;
+        offsetY = event.clientY - y;
+        velocityX = 0;
+        velocityY = 0;
+      });
+
+      document.addEventListener('mousemove', function(event) {
+        if (isMouseDown) {
+          x = event.clientX - offsetX;
+          y = event.clientY - offsetY;
         }
-    </style>
-    <script>
-        let ball;
-        let ballsize;
-        let x;
-        let y;
-        let velocityX;
-        let velocityY;
-        let gravity;
-        let restitution;
-        let isMouseDown;
-        let offsetX;
-        let offsetY;
+      });
 
-        function init() {
-            ball = document.getElementById('ball');
-            ballsize = 40;
-            x = 200;
-            y = 100;
-            velocityX = Math.random()
-            velocityY = Math.random()
-            gravity = 0.5;
-            restitution = 0.8;
-            isMouseDown = false;
-            offsetX = 0;
-            offsetY = 0;
+      document.addEventListener('mouseup', function() {
+        isMouseDown = false;
+      });
+
+      setInterval(update, 1000 / 60); // 60 FPS
+    }
+
+    function update() {
+      if (!isMouseDown) {
+        velocityY += gravity;
+        x += velocityX;
+        y += velocityY;
+
+        if (y + ballSize > window.innerHeight) {
+          y = window.innerHeight - ballSize;
+          velocityY *= -restitution;
         }
 
-        ball.addEventListner('mousedown', function(event){
-            isMouseDown = true;
-            offsetX = event.clientX - x;
-            offsetY = event.clientY - y;
-        })
-
-        document.addEventListner('mousemove', function(event){
-            if(isMouseDown){
-                x = event.clientX - offsetX;
-                y = event.clientY - offsetY;
-            }
-        })
-
-        document.addEventListener('mouseup', function(){
-            isMouseDown = false;
-        })
-
-        setInterval(update, 1000/60);
-
-        function update() {
-            if (!isMouseDown) {
-                velocityY += gravity;
-                x += velocityX;
-                y += velocityY;
-
-                if (y + ballsize > window.innerHeight){
-
-                }
-            }
+        if (x + ballSize > window.innerWidth) {
+          x = window.innerWidth - ballSize;
+          velocityX *= -restitution;
+        } else if (x < 0) {
+          x = 0;
+          velocityX *= -restitution;
         }
-    </script>
+      }
+
+      ball.style.left = x + 'px';
+      ball.style.top = y + 'px';
+    }
+
+    window.onload = init;
+  </script>
 </head>
 <body>
-    <div id="ball"></div>
+  <div id="ball" class="ball"></div>
 </body>
 </html>
