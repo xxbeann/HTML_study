@@ -8,7 +8,37 @@
 <body>
     <h3>일기쓰기</h3>
     <hr>
-    <!--저장을 누르면 날짜와 내용을 로컬 스토리지에 저장-->
-    <!-- 보기 버튼을 누르면 새 창이 열리며 일기를 볼 수 있는 페이지-->
+    <p id="today"></p>
+    <textarea id="diary" cols="40" rows="10"></textarea>
+    <br>
+    <input type="button" value="저장" id="save"><span> </span><input type="button" value="보기" id="view">
+    <script>
+        // 날짜 설정 ---------------------------------------
+        let p = document.getElementById('today');
+        let now = new Date();
+        let y = now.getFullYear();
+        let m = (now.getMonth()+1);
+        let d = now.getDate();
+        console.log(y , m , d);
+        p.innerHTML=`오늘 ${y}. ${m}. ${d}.`
+        let date = `${y}. ${m}. ${d}`
+        console.log(date);
+        // 저장 버튼 처리 -------------------------------------
+        let diary = document.getElementById('diary');
+        let s = document.getElementById('save');
+        s.addEventListener('click', send);
+
+        function send() {
+            localStorage.setItem(date , diary.value);
+        }
+        // 보기 버튼 처리 -------------------------------------
+        let v = document.getElementById('view');
+        v.addEventListener('click', open_viewer);
+        function open_viewer() {
+            window.open('6-3_viewer.html','_blank');
+        }
+
+
+    </script>
 </body>
 </html>
